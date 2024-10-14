@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  euclid:
+    build:
+      context: ./public.ecr.aws/lambda/python-3.12
+      dockerfile: Dockerfile
+      tags: ["euclid:latest", "euclid:public-ecr-aws-lambda-python-3.12"]
+    container_name: euclid
