@@ -4,12 +4,16 @@ A Docker base image for geospatial applications, built on top of AWS Lambda's Py
 
 ## Table of Contents
 
-- Features
-- Getting Started
-- Prerequisites
-- Building the Images
-- Usage
-- License
+- [Geospatial Docker Image](#geospatial-docker-image)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Enabling Docker BuildKit](#enabling-docker-buildkit)
+    - [Installing Docker Buildx](#installing-docker-buildx)
+    - [Creating a Buildx Builder](#creating-a-buildx-builder)
+  - [Building the Images](#building-the-images)
+  - [License](#license)
 
 ## Features
 
