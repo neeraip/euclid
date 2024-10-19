@@ -1,8 +1,22 @@
 version: "3.9"
 
 services:
-  public-ecr-aws-lambda-python-3.12-gdal-3.8.0:
+  public-ecr-aws-lambda-python-3.12:
     build:
-      context: ./public.ecr.aws/lambda/python-3.12-gdal-3.8.0
+      context: ./public.ecr.aws/lambda/python-3.12
       dockerfile: Dockerfile
-      tags: ["euclid:public-ecr-aws-lambda-python-3.12-gdal-3.8.0"]
+      tags:
+        - "neeraip/euclid:public-ecr-aws-lambda-python-3.12"
+      platforms:
+        - linux/amd64
+        - linux/arm64
+
+  python-3.12:
+    build:
+      context: ./python-3.12
+      dockerfile: Dockerfile
+      tags:
+        - "neeraip/euclid:python-3.12"
+      platforms:
+        - linux/amd64
+        - linux/arm64

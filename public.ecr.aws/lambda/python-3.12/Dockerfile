@@ -9,7 +9,7 @@ RUN dnf -y update && \
     zlib-devel sqlite-devel postgresql-devel && \
     dnf clean all
 
-# Install PROJ
+# Install PROJ from source
 RUN wget https://download.osgeo.org/proj/proj-9.2.1.tar.gz -O /tmp/proj-9.2.1.tar.gz && \
     tar -xvf /tmp/proj-9.2.1.tar.gz -C /tmp && \
     mkdir /tmp/proj-9.2.1/build && \
@@ -19,7 +19,7 @@ RUN wget https://download.osgeo.org/proj/proj-9.2.1.tar.gz -O /tmp/proj-9.2.1.ta
     cmake --build . --target install && \
     rm -rf /tmp/proj-9.2.1 /tmp/proj-9.2.1.tar.gz
 
-# Install GDAL
+# Install GDAL from source
 RUN wget https://github.com/OSGeo/gdal/releases/download/v3.8.0/gdal-3.8.0.tar.gz -O /tmp/gdal-3.8.0.tar.gz && \
     tar -xvf /tmp/gdal-3.8.0.tar.gz -C /tmp && \
     mkdir /tmp/gdal-3.8.0/build && \
@@ -29,7 +29,7 @@ RUN wget https://github.com/OSGeo/gdal/releases/download/v3.8.0/gdal-3.8.0.tar.g
     cmake --build . --target install && \
     rm -rf /tmp/gdal-3.8.0 /tmp/gdal-3.8.0.tar.gz
 
-# Install Python packages
+# Install Python GDAL package
 RUN pip install GDAL==3.8.0
 
 ENTRYPOINT ["python3"]
