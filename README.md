@@ -12,6 +12,7 @@ A Docker base image for geospatial applications, built on top of AWS Lambda's Py
     - [Enabling Docker BuildKit](#enabling-docker-buildkit)
     - [Installing Docker Buildx](#installing-docker-buildx)
     - [Creating a Buildx Builder](#creating-a-buildx-builder)
+    - [Generating Dockerfiles](#generating-dockerfiles)
   - [Building the Images](#building-the-images)
   - [License](#license)
 
@@ -68,6 +69,14 @@ Check available platforms:
 
 ```bash
 docker buildx inspect --bootstrap
+```
+
+### Generating Dockerfiles
+
+Each tag has a _Dockerfile.template_ that needs to be generated into a Dockerfile. To do so, run the following script:
+
+```bash
+./generate.sh
 ```
 
 ## Building the Images
