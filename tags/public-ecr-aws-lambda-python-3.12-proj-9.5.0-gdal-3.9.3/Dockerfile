@@ -1,7 +1,5 @@
 FROM public.ecr.aws/lambda/python:3.12
 
-WORKDIR /app
-
 # Install essential build tools and dependencies
 RUN dnf -y update && \
     dnf -y install make tar wget git gcc-c++ cmake3 \
