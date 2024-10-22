@@ -9,4 +9,4 @@ services:
       tags:
         - "neeraip/euclid:public-ecr-aws-lambda-python-3.12-proj-9.5.0-gdal-3.9.3"
       platforms:
-        - linux/arm64
+        - linux/amd64
