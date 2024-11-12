@@ -29,5 +29,3 @@ RUN wget https://github.com/OSGeo/gdal/releases/download/v3.9.3/gdal-3.9.3.tar.g
 
 # Install Python GDAL package
 RUN pip install GDAL==3.9.3
-
-ENTRYPOINT ["python3"]
