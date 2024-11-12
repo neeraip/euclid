@@ -29,3 +29,12 @@ RUN wget https://github.com/OSGeo/gdal/releases/download/v3.9.3/gdal-3.9.3.tar.g
 
 # Install Python GDAL package
 RUN pip install GDAL==3.9.3
+
+# Install tippecanoe from source
+RUN git clone https://github.com/felt/tippecanoe.git --depth=1 --branch=2.68.0 --single-branch /tmp/tippecanoe && \
+    cd /tmp/tippecanoe && \
+    make -j && \
+    make install && \
+    cp /tmp/tippecanoe/tippecanoe /usr/bin/tippecanoe && \
+    cp /tmp/tippecanoe/tile-join /usr/bin/tile-join && \
+    rm -rf /tmp/tippecanoe
