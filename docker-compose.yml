@@ -10,6 +10,7 @@ services:
         - "neeraip/euclid:public-ecr-aws-lambda-python-3.12-proj-9.5.0-gdal-3.9.3-tippecanoe-2.68.0"
       platforms:
         - linux/amd64
+        - linux/arm64
   public-ecr-aws-lambda-python-3.12-proj-9.5.0-gdal-3.9.3:
     image: neeraip/euclid:public-ecr-aws-lambda-python-3.12-proj-9.5.0-gdal-3.9.3
     build:
@@ -19,6 +20,7 @@ services:
         - "neeraip/euclid:public-ecr-aws-lambda-python-3.12-proj-9.5.0-gdal-3.9.3"
       platforms:
         - linux/amd64
+        - linux/arm64
   public-ecr-aws-lambda-python-3.12-tippecanoe-2.68.0:
     image: neeraip/euclid:public-ecr-aws-lambda-python-3.12-tippecanoe-2.68.0
     build:
@@ -28,3 +30,4 @@ services:
         - "neeraip/euclid:public-ecr-aws-lambda-python-3.12-tippecanoe-2.68.0"
       platforms:
         - linux/amd64
+        - linux/arm64
